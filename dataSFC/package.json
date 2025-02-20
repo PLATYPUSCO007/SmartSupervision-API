@@ -1,0 +1,11 @@
+{
+  "name": "datasfc",
+  "version": "1.0.0",
+  "description": "Consumo de API REST SFC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ricardo E.",
+  "license": "ISC"
+}
