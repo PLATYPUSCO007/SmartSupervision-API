@@ -5,7 +5,7 @@ import json
 from urllib.parse import unquote
 
 # @API_SECRET, clave secreta suministrada mediante correo electronico enviado a cada entidad
-API_SECRET = 'wge^%f)4!a*u-x64jnya3zxogsm6#5k2s!tqhu2s@e^7t0vlo7'
+API_SECRET = '0m76b@nx6=8h_=n)p3p-!pnl0+((jcuqh245ed=whwl)kq!jc0'
 
 api_key_bytes= bytes(API_SECRET, 'utf-8')
 
@@ -16,8 +16,11 @@ api_key_bytes= bytes(API_SECRET, 'utf-8')
 # *************************************************************
 # VALORES DE DATA PARA GENERAR TOKEN
 {
-    "username": "rafaelenrique.cabrera@bbva.com",
-    "password": "?^'NToSd%ql#gVv1X{e+"
+    "username": "rafaelenrique.cabrera@bbva.com.co",
+    "password": "Ypr!$ydeOrTs7#XNJkL!p%E"
+
+    # "username": "jonnathanandres.barrantes@bbva.com",
+    # "password": "lR%!EFZ!PJq&m@EW6LKDF5t"
 }
 # *************************************************************
 # VALORES DE DATA PARA ENVIAR ARCHIVOS MTO 3
@@ -54,30 +57,9 @@ api_key_bytes= bytes(API_SECRET, 'utf-8')
    """
 # *************************************************************************************
 data = {
-            "codigo_queja": "1426202410021902100737",
-            "sexo": 1,
-            "lgbtiq": 2,
-            "condicion_especial": 98,
-            "canal_cod": 5,
-            "producto_cod": 124,
-            "macro_motivo_cod": 916,
-            "estado_cod": 2,
-            "fecha_actualizacion": "2024-10-28T12:30:00",
-            "producto_digital": 2,
-            "a_favor_de": 1,
-            "aceptacion_queja": None,
-            "rectificacion_queja": None,
-            "desistimiento_queja": 2,
-            "prorroga_queja": None,
-            "admision": 9,
-            "documentacion_rta_final": "false",
-            "anexo_queja": "false",
-            "fecha_cierre": None,
-            "tutela": 2,
-            "ente_control": 99,
-            "marcacion": 1,
-            "queja_expres": 2
-        }
+    "username": "rafaelenrique.cabrera@bbva.com.co",
+    "password": "Ypr!$ydeOrTs7#XNJkL!p%E"
+}
 
 
 data_str = json.dumps(data, ensure_ascii=False)

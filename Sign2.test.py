@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 # @API_SECRET, clave secreta suministrada mediante correo electronico enviado a cada entidad
-API_SECRET = 'wge^%f)4!a*u-x64jnya3zxogsm6#5k2s!tqhu2s@e^7t0vlo7'
+API_SECRET = 'zjp@kxd)vr*mvwm++vtrbb-p$$uvg&@&0l_r7z@27-_o38-2%o'
 
 api_key_bytes= bytes(API_SECRET, 'utf-8')
 data_api = []
@@ -14,6 +14,11 @@ data_docs_api = []
 carpeta_signatureJson = Path("signaturesJSON")
 carpeta_dataJson = Path("fileJSON")
 
+
+titulo_json = "41_2.json";
+titulo_docs_json = "dataDocs_41.json";
+titulo_firma_docs_json = "signsDocs_41.json";
+titulo_firma_data_json = "signsData_41.json";
 
 # *************************************************************************************
 # @data, en esta variable va el cuerpo del mensaje enviado en la peticion,
@@ -248,6 +253,7 @@ def get_content_file(name_file_json):
     return json.load(archivo)
 
 def generate_dataDocs_json(name_file_json):
+  # print(f'Data - {name_file_json}')
   content = get_content_file(name_file_json)
   for queja in content:
     data_docs_api.append(
@@ -256,7 +262,7 @@ def generate_dataDocs_json(name_file_json):
         "type":"pdf"
       }
     )
-  generate_fileSigns(carpeta_dataJson, "dataDocs.json", data_docs_api)
+  generate_fileSigns(carpeta_dataJson, titulo_docs_json, data_docs_api)
 
 
 def run_files_JSON(name_file_json):
@@ -265,11 +271,11 @@ def run_files_JSON(name_file_json):
     generate_keys(dataQueja)
 
 
-generate_dataDocs_json("data.json")
-run_files_JSON("dataDocs.json")
-generate_fileSigns(carpeta_signatureJson, "signaturesDocs.json", data_api)
+generate_dataDocs_json(titulo_json)
+run_files_JSON(titulo_docs_json)
+generate_fileSigns(carpeta_signatureJson, titulo_firma_docs_json, data_api)
 
 
 data_api = []
-run_files_JSON("data.json")
-generate_fileSigns(carpeta_signatureJson, "signaturesCases.json", data_api)
+run_files_JSON(titulo_json)
+generate_fileSigns(carpeta_signatureJson, titulo_firma_data_json, data_api)
